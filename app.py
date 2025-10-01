@@ -1166,10 +1166,10 @@ class ResumeApp:
         # Profile Section
         st.markdown(f"""
             <div class="profile-section">
-                <img src="{image_base64 if image_base64 else '#'}"
-                     alt="Het Patel"
+                <img src="{image_base64 if image_base64 else 'https://ibb.co/DHDpLL3W'}"
+                     alt="BKIT"
                      class="profile-image"
-                     onerror="this.onerror=null; this.src='#';">
+                     onerror="this.onerror=null; this.src='https://ibb.co/DHDpLL3W';">
                 <h2 class="profile-name">BKIT_SOLUTIONS</h2>
                 <p class="profile-title">#####</p>
                 <div class="social-links">
