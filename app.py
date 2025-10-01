@@ -1166,28 +1166,25 @@ class ResumeApp:
         # Profile Section
         st.markdown(f"""
             <div class="profile-section">
-                <img src="{image_base64 if image_base64 else 'https://avatars.githubusercontent.com/Hunterdii'}"
+                <img src="{image_base64 if image_base64 else '#'}"
                      alt="Het Patel"
                      class="profile-image"
-                     onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/Hunterdii';">
-                <h2 class="profile-name">Het Patel (Hunterdii)</h2>
-                <p class="profile-title">Full Stack Developer & AI/ML Enthusiast</p>
+                     onerror="this.onerror=null; this.src='#';">
+                <h2 class="profile-name">BKIT_SOLUTIONS</h2>
+                <p class="profile-title">#####</p>
                 <div class="social-links">
-                    <a href="https://github.com/Hunterdii" class="social-link" target="_blank">
+                    <a href="#" class="social-link" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" class="social-link" target="_blank">
+                    <a href="#" class="social-link" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:hunterdii9879@gmail.com" class="social-link" target="_blank">
+                    <a href="#" class="social-link" target="_blank">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
                 <p class="bio-text">
-                    Hello! I'm a passionate Full Stack Developer with expertise in AI and Machine Learning.
-                    I created Smart Resume AI to revolutionize how job seekers approach their career journey.
-                    With my background in both software development and AI, I've designed this platform to
-                    provide intelligent, data-driven insights for resume optimization.
+                    We are a passionate team of Full Stack Developers with expertise in AI and Machine Learning. Together, we built Smart Resume AI to bridge the gap between talent and industry. Our mission is to create an extraordinary platform that empowers job seekers with intelligent, data-driven insights, helping them showcase their potential and connect with the right opportunities.
                 </p>
             </div>
         """, unsafe_allow_html=True)
@@ -1241,7 +1238,7 @@ class ResumeApp:
             </div>
         """, unsafe_allow_html=True)
 
-        st.toast("Check out these repositories: [Iriswise](https://github.com/Hunterdii/Iriswise)", icon="ℹ️")
+        st.toast("Check out these repositories: [Iriswise](#)", icon="ℹ️")
 
     def render_analyzer(self):
         """Render the resume analyzer page"""
