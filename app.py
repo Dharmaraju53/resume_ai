@@ -39,8 +39,8 @@ import datetime
 
 # Set page config at the very beginning
 st.set_page_config(
-    page_title="Smart Resume AI",
-    page_icon="🚀",
+    page_title="BKIT_AI_RESUME",
+    page_icon="🔥",
     layout="wide"
 )
 
@@ -79,13 +79,14 @@ class ResumeApp:
             st.session_state.is_admin = False
 
         self.pages = {
-            "🏠 HOME": self.render_home,
-            "🔍 RESUME ANALYZER": self.render_analyzer,
-            "📝 RESUME BUILDER": self.render_builder,
-            "📊 DASHBOARD": self.render_dashboard,
-            "🎯 JOB SEARCH": self.render_job_search,
-            "💬 FEEDBACK": self.render_feedback_page,
-            "ℹ️ ABOUT": self.render_about
+            "🏡 Start": self.render_home,                # instead of HOME
+            "🧾 CV Insights": self.render_analyzer,      # instead of RESUME ANALYZER
+            "✍️ CV Creator": self.render_builder,        # instead of RESUME BUILDER
+            "📈 Insights Hub": self.render_dashboard,    # instead of DASHBOARD
+            "🎯 Career Finder": self.render_job_search,  # instead of JOB SEARCH
+            "🗣️ Share Feedback": self.render_feedback_page, # instead of FEEDBACK
+            "📖 Learn More": self.render_about           # instead of ABOUT
+
         }
 
         # Initialize dashboard manager
@@ -111,9 +112,16 @@ class ResumeApp:
 
         # Load Google Fonts
         st.markdown("""
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        """, unsafe_allow_html=True)
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Latest Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Optional: Sleek Phosphor Icons -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+""", unsafe_allow_html=True)
+
 
         if 'resume_data' not in st.session_state:
             st.session_state.resume_data = []
@@ -474,12 +482,12 @@ class ResumeApp:
             # GitHub star button with lottie animation
             st.markdown("""
             <div style='display: flex; justify-content: center; align-items: center; margin-bottom: 10px;'>
-                <a href='https://github.com/Hunterdii/Smart-AI-Resume-Analyzer' target='_blank' style='text-decoration: none;'>
+                <a href='#' target='_blank' style='text-decoration: none;'>
                     <div style='display: flex; align-items: center; background-color: #24292e; padding: 5px 10px; border-radius: 5px; transition: all 0.3s ease;'>
                         <svg height="16" width="16" viewBox="0 0 16 16" version="1.1" style='margin-right: 5px;'>
                             <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" fill="gold"></path>
                         </svg>
-                        <span style='color: white; font-size: 14px;'>Star this repo</span>
+                        <span style='color: white; font-size: 14px;'>Star this work</span>
                     </div>
                 </a>
             </div>
@@ -489,19 +497,19 @@ class ResumeApp:
             st.markdown("""
             <p style='text-align: center;'>
                 Powered by <b>Streamlit</b> and <b>Google Gemini AI</b> | Developed by 
-                <a href="https://www.linkedin.com/in/patel-hetkumar-sandipbhai-8b110525a/" target="_blank" style='text-decoration: none; color: #FFFFFF'>
-                    <b>Het Patel (Hunterdii)</b>
+                <a href="#" target="_blank" style='text-decoration: none; color: #FFFFFF'>
+                    <b>BKIT_Solutions</b>
                 </a>
             </p>
             <p style='text-align: center; font-size: 12px; color: #888888;'>
-                "Every star counts! If you find this project helpful, please consider starring the repo to help it reach more people."
+                "Want to explore more exciting projects? Get in touch with BKIT Solutions today!"
             </p>
             """, unsafe_allow_html=True)
 
     def load_image(self, image_name):
         """Load image from static directory"""
         try:
-            image_path = f"c:/Users/shree/Downloads/smart-resume-ai/{image_name}"
+            image_path = f"c:/Users/Caleb/Downloads/smart-resume-ai/{image_name}"
             with open(image_path, "rb") as f:
                 image_bytes = f.read()
             encoded = base64.b64encode(image_bytes).decode()
@@ -547,7 +555,7 @@ class ResumeApp:
         """Render the dashboard page"""
         self.dashboard_manager.render_dashboard()
 
-        st.toast("Check out these repositories: [Awesome Hacking](https://github.com/Hunterdii/Awesome-Hacking)", icon="ℹ️")
+        st.toast("Check out these repositories: [Awesome Projects](#))", icon="ℹ️")
 
 
     def render_empty_state(self, icon, message):
